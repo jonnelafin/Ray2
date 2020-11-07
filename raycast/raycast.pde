@@ -27,13 +27,13 @@ void setup() {
   System.out.println("Packed:" + map.pack(enc, mapw, mapdat.length()));
   
   //load
-  String code = "5#0x01C40000#25";
+  String code = "5#0x01F20000#25";
   System.out.println("Packed map: \n" + code);
   String data = map.unpack_d(code);
   mapw = map.unpack_w(code);
   int fsize = map.unpack_f(code);
   System.out.println("Unpacked map: " + mapw + " : " + data + " : " + fsize);
-  boolean[][] dat = map.dataFromPacked(data, mapw, fsize);
+  boolean[][] dat = map.dataFromPacked(data, mapw-1, fsize);
   
   String outp = "";
   for(boolean[] row : dat){

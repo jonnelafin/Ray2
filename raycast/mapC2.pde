@@ -13,7 +13,7 @@ class mapC2{
         }
         return dat;
     }
-    //Data from save
+    //Data from save, please remember to substract one from w before giving it here
     boolean[][] dataFromPacked(String val, int w, int fsiz){
         boolean dat[][] = new boolean[fsiz][fsiz];
         
