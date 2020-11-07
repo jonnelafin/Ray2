@@ -1,5 +1,5 @@
 # Ray2
-A raycaster that supports the [mapC2](https://github.com/jonnelafin/mapC2) format.
+A raycaster that supports the [mapC2](https://github.com/jonnelafin/mapC2) map format.
 # Dependencies / What you need to run this
 - Processing 3
 # Problems
