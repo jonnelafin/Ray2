@@ -27,7 +27,7 @@ void setup() {
   System.out.println("Packed:" + map.pack(enc, mapw, mapdat.length()));
   
   //load
-  String code = "5#0x01060000#25";
+  String code = "5#0x01C40000#25";
   System.out.println("Packed map: \n" + code);
   String data = map.unpack_d(code);
   mapw = map.unpack_w(code);
@@ -51,12 +51,12 @@ void setup() {
   
   //Actual loading
   int size = width/mapw;
-  walls = new Boundary[fsize*fsize+1];
+  walls = new Boundary[fsize*fsize+4];
   for(int x=0;x<fsize;x++){
       for(int y=0;y<fsize;y++){
           if(dat[x][y] == true){
-              int xo = x*size;
-              int yo = y*size;
+              int yo = x*size;
+              int xo = y*size;
               Integer offsetsx[] = new Integer[]{
                 xo, xo+size, xo+size, xo, /**/xo
               };
@@ -68,7 +68,7 @@ void setup() {
                   int yp = offsetsy[i];
                   int xp2 = offsetsx[i+1];
                   int yp2 = offsetsy[i+1];
-                  walls[x+y+i] = new Boundary(xp, yp, xp2, yp2);
+                  walls[size*x+y*4+i] = new Boundary(xp, yp, xp2, yp2);
               }
           }
       }
