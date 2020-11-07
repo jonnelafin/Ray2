@@ -1,3 +1,6 @@
+// Translated mapC2 to java from https://github.com/jonnelafin/mapC2
+// All code by Elias Eskelinen / Jonnelafin 2020
+// Under the MIT License, please refer to the file LICENSE for more details
 class mapC2{
     boolean supressHex = false;
     String m(String thing, int times){

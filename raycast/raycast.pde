@@ -1,10 +1,12 @@
-// Daniel Shiffman
+// Original raycaster code by Daniel Shiffman
 // https://thecodingtrain.com/CodingChallenges/145-2d-ray-casting.html
 // https://youtu.be/TOEi6T2mtHo
 
 // 2D Ray Casting
 // https://editor.p5js.org/codingtrain/sketches/Nqsq3DFv-
 
+// Modifications and the addition of mapC2 integration by Elias Eskelinen / Jonnelafin 2020
+// Modified code under the MIT License, please refer to the file LICENSE for more details
 Boundary[] walls;
 Ray ray;
 Particle particle;
