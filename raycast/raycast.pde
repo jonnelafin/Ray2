@@ -51,10 +51,10 @@ void setup() {
   
   //Actual loading
   int size = width/mapw;
-  walls = new Boundary[fsize*2+4];
+  walls = new Boundary[fsize*fsize+1];
   for(int x=0;x<fsize;x++){
       for(int y=0;y<fsize;y++){
-          if(dat[x][y]){
+          if(dat[x][y] == true){
               int xo = x*size;
               int yo = y*size;
               Integer offsetsx[] = new Integer[]{
@@ -68,7 +68,7 @@ void setup() {
                   int yp = offsetsy[i];
                   int xp2 = offsetsx[i+1];
                   int yp2 = offsetsy[i+1];
-                  walls[i] = new Boundary(xp, yp, xp2, yp2);
+                  walls[x+y+i] = new Boundary(xp, yp, xp2, yp2);
               }
           }
       }
